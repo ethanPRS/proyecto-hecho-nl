@@ -1,0 +1,377 @@
+/*
+BASE: Mobile
+*/
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    gap: 6px;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(45px,55px) minmax(35px,140px) minmax(30px,62px) minmax(50px,466px) minmax(65px,493px) minmax(35px,45px);
+    grid-template-areas: 
+    "header"
+    "nav"
+    "search-bar"
+    "main"
+    "aside"
+    "footer";
+
+}
+
+header {
+    grid-area: header;
+}
+
+/* 
+ * ESTILO HEADER
+*/
+.site-header {
+    display: flex;    
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 12px;         
+    gap: 12px;             
+    background-color: #FF8400;
+    /* Linea divisoria */
+    border-bottom: 2px solid #ffffff; 
+}
+
+/*
+ * BOTON HAMBURGESA 
+*/
+.header-hamburger-botton {
+    background-color: hsl(0, 0%, 100%);  
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; 
+    border: none;
+    
+    /* Centramos el ícono SVG dentro del círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Para que aparezca la manita al pasar el mouse */
+    cursor: pointer;
+}
+
+/*
+ * LOGO 
+*/
+.logo-placeholder {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-placeholder img {
+    width: 100%;
+    height: 100%; 
+    /* Evita que la imagen se deforme */
+    object-fit: contain; 
+}
+
+/*
+ * NOMBRE DEL SITIO
+*/
+.site-name {
+    font-weight: bold;
+    font-size: 1.1rem; 
+    color: #ffffff;
+    border-left: 2px solid #ffffff;
+    padding-left: 12px;             
+}
+
+/*
+ * LOGO HECHO EN NUEVO LEON
+*/
+
+.hecho-nuevo-leon img{
+    width: 100%;
+    height: 100%;
+}
+
+/*
+ * BARRA DE BUSQUEDA
+*/
+#search-bar {
+    display: flex;         
+    align-items: center;   
+    background-color: #f5f5f5;
+    border-radius: 25px;       
+    padding: 10px 15px;
+    gap: 10px;       
+}
+
+#search-bar input {
+    /* Ocupa todo el espacio restante */
+    width: 100%;           
+    border: none;          
+    background: none;  
+    /* Quita el borde azul al hacer clic */    
+    outline: none;         
+    
+    font-size: 1rem;       
+    color: #333;           
+}
+
+#search-bar input::placeholder {
+    color: #888;
+}
+
+/* Icono de lupa */
+#search-bar img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/*
+ * CATEGORIAS
+*/
+
+/* Titulo categorias */
+.categories h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de las categorias */
+.category-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px;                  
+}
+
+/* Tarjeta Inidivdual */
+.category-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 12px;
+    text-align: center;
+    /* Quita el subrayado del enlace */
+    text-decoration: none; 
+    /* Sombra */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Imagen de categoria */
+.card-image-placeholder {
+    height: 100px;
+    background-color: #a9b4c0; 
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+/* Texto de la tarjeta */
+.card-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+}
+
+
+
+
+
+
+/*
+ * PRODUCTOS RECIENTES
+*/
+
+/* Contenedor principal */
+.recent-products {
+    padding: 10px 15px;
+    
+    /* Reseteamos estilos */
+    display: block; 
+    font: inherit;
+    color: inherit;
+}
+
+/* Título Productos Recientes */
+.recent-products h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* Tarjeta de producto reciente */
+.product-card {
+    margin-bottom: 20px;
+}
+
+/* Placeholder de la imagen */
+.product-image-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: #a9b4c0;
+    border-radius: 16px;
+    margin-bottom: 12px;
+}
+
+/* Titulo del producto */
+.product-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+/* Info del producto */
+.product-info {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-info .price {
+    font-weight: bold;
+    color: #333;
+}
+
+.product-info .divider {
+    margin: 0 5px;
+    color: #ccc; 
+}
+
+/* Descripción del producto */
+.product-card .product-description {
+    font-size: 0.9rem;
+    color: #777;
+    /* Separa las lineas de texto */
+    line-height: 1.5; 
+    margin: 0;
+}
+
+
+
+
+/*
+ * FOOTER
+*/
+
+/* Contacto */
+.footer-contact {
+    background-color: #f37b21;
+    color: #ffffff;
+    padding: 30px 15px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-contact h4 {
+    margin: 0 0 15px 0;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.footer-contact p {
+    margin: 8px 0;
+    /* Para alinear icono y texto */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Logo footer */
+.footer-bottom-logo {
+    background-color: #ffffff;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+.footer-bottom-logo img {
+    height: 45px;
+    width: auto;
+}
+
+
+
+
+
+nav {
+    grid-area: nav;
+    background-color:#FF8400;
+}
+
+main {
+    grid-area: main;
+    background-color: rgb(255, 255, 255);
+}
+
+aside {
+    grid-area: aside;
+    background-color: rgb(255, 255, 255);
+}
+
+#search-bar {
+    grid-area: search-bar;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color:rgb(208, 86, 208);
+}
+
+/*
+BASE: Tablet
+*/
+@media (min-width: 768px) {
+    body {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: 
+        /*header*/
+        minmax(45px,55px) 
+        /*nav*/
+        minmax(35px,45px) 
+        /*aside,main*/
+        1fr
+        /*wildcar1,wildcar2*/
+        minmax(60px,120px)
+        /*footer*/
+        minmax(35px,45px);
+        grid-template-areas: 
+        "header   header"
+        "nav      nav"
+        "aside    main"
+        "wildcar1 wildcar2"
+        "footer   footer";
+
+    }
+}
+
+/*
+BASE: Desktop
+*/
+
+@media (min-width: 1024px) {
+    body {
+        grid-template-columns: 200px 1fr 170px;
+        grid-template-rows: 
+        /*header*/
+        minmax(45px,55px)       
+        /*nav*/
+        minmax(35px,45px)
+        /*sidebar,main,Wildcar1*/
+        minmax(120px,1fr) 
+        /*sidebar,main,Wildcar2*/
+        minmax(120px,1fr) 
+        /*Footer*/
+        minmax(35px,45px);
+        grid-template-areas: 
+        "header  header header"
+        "nav     nav    nav"
+        "aside   main   wildcar1"
+        "aside   main   wildcar2"
+        "footer  footer footer";
+    }
+
+}
